@@ -1,4 +1,4 @@
-# Copy to clipboard
+# Copy to clipboard [![version](https://img.shields.io/github/release/hchiam/clipboard?style=flat-square)](https://github.com/hchiam/clipboard/releases)
 
 ```js
 https://cdn.jsdelivr.net/gh/hchiam/clipboard@master/copyToClipboard.js
