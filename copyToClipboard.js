@@ -1,6 +1,6 @@
 function copyToClipboard(text, callback) {
   try {
-    var temp = document.createElement("input");
+    var temp = document.createElement("textarea");
     document.body.append(temp);
     temp.value = text;
     temp.select();
