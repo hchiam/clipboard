@@ -14,3 +14,20 @@ function copyToClipboard(text, callback) {
     );
   }
 }
+
+function createElementToClickToCopyToClipboard(parentElement, text, callback) {
+  try {
+    var html =
+      '<p>Click to copy to clipboard:</p><pre title="click to copy to clipboard" >' +
+      text +
+      "</pre>";
+    parentElement.innerHTML = html;
+    parentElement.querySelector("pre").addEventListener("click", function () {
+      copyToClipboard(text, callback);
+    });
+  } catch (err) {
+    console.log(
+      "Could not automatically create element that you can click to copy to clipboard."
+    );
+  }
+}
