@@ -17,6 +17,9 @@ function copyToClipboard(text, callback) {
 
 function createElementToClickToCopyToClipboard(parentElement, text, callback) {
   try {
+    if (typeof parentElement === "string") {
+      parentElement = document.querySelector(parentElement);
+    }
     var html =
       '<p>Click to copy to clipboard:</p><pre title="click to copy to clipboard" >' +
       text +
