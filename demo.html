@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard Demo</title>
+  </head>
+  <body>
+    <code id="code_goes_here"></code>
+    <script src="copyToClipboard.js"></script>
+    <script>
+      createElementToClickToCopyToClipboard(
+        document.getElementById("code_goes_here"),
+        `// some example code
+function test() {
+  alert('example code');
+}`,
+        function () {
+          alert("Copied code to clipboard!");
+        }
+      );
+    </script>
+  </body>
+</html>

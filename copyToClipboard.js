@@ -25,7 +25,7 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
       text +
       "</pre>";
     parentElement.innerHTML = html;
-    parentElement.querySelector("pre").addEventListener("click", function () {
+    parentElement.addEventListener("click", function () {
       copyToClipboard(text, callback);
     });
   } catch (err) {
