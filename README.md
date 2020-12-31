@@ -7,7 +7,7 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@master/copyToClipboard.js
 or:
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.1.0/copyToClipboard.js
+https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.2.0/copyToClipboard.js
 ```
 
 ## Example usage:
