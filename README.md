@@ -7,12 +7,12 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@master/copyToClipboard.js
 or:
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.3.0/copyToClipboard.js
+https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.0.0/copyToClipboard.js
 ```
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.3.0/copyToClipboard.js"
+  src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.0.0/copyToClipboard.js"
   integrity="sha384-9lRe6AQpEwXDt2qF8xOzrA6D2aqs9JmOrEDxUx6+CqgnnQH1D7NjUFEcP9Y5Uv7w"
   crossorigin="anonymous"
 ></script>
@@ -24,39 +24,24 @@ See [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html)
 
 or
 
-```js
-function handleClick(text) {
-  copyToClipboard(text, function () {
-    alert("Copied code to clipboard!");
-  });
-}
-// <pre onclick="handleClick(this.innerText)">
-// body:before {
-//   z-index: 9001;
-//   content: '';
-//   position: absolute;
-//   width: 120px;
-//   height: 120px;
-//   top: calc(50% - 120px/2); /* -1/2 of height */
-//   left: calc(50% - 120px/2); /* -1/2 of width */
-//   background: red;
-// }
-// </pre>;
+```html
+<pre onclick="handleClick(this.innerText)">some code or text to be copied</pre>
+
+<script type="text/javascript">
+  function handleClick(text) {
+    copyToClipboard(text, function () {
+      alert("Copied code to clipboard!");
+    });
+  }
+</script>
 ```
 
 or:
 
 ```js
-var parentElement = document.querySelector("#here");
+var parentElement = document.querySelector("#container");
 var text = `body:before {
   z-index: 9001;
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: calc(50% - 120px/2); /* -1/2 of height */
-  left: calc(50% - 120px/2); /* -1/2 of width */
-  background: red;
 }`;
 var callback = function () {
   alert("Copied code to clipboard!");
@@ -67,27 +52,21 @@ createElementToClickToCopyToClipboard(parentElement, text, callback);
 or:
 
 ```js
-var parentElement = "#here";
+var selectorString = "#container";
 var text = `body:before {
   z-index: 9001;
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: calc(50% - 120px/2); /* -1/2 of height */
-  left: calc(50% - 120px/2); /* -1/2 of width */
-  background: red;
 }`;
 var callback = function () {
   alert("Copied code to clipboard!");
 };
-createElementToClickToCopyToClipboard(parentElement, text, callback);
+createElementToClickToCopyToClipboard(selectorString, text, callback);
 ```
 
 or simply:
 
 ```js
 // text can be automatically pulled from the parentElement:
+var parentElement = document.querySelector("#container");
 createElementToClickToCopyToClipboard(parentElement, function (code) {
   alert("Copied code to clipboard! \n\n" + text);
 });
