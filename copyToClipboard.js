@@ -6,7 +6,7 @@ function copyToClipboard(text, callback) {
     temp.select();
     document.execCommand("copy");
     temp.remove();
-    if (callback) callback();
+    if (callback) callback(text);
   } catch (err) {
     alert(
       "Could not automatically copy to clipboard. \n\n Copy this text instead: \n\n" +
@@ -19,6 +19,10 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
   try {
     if (typeof parentElement === "string") {
       parentElement = document.querySelector(parentElement);
+    }
+    if (!text || typeof text === "function") {
+      callback = text;
+      text = parentElement.innerText;
     }
     var html =
       '<p>Click to copy to clipboard:</p><pre title="click to copy to clipboard" >' +

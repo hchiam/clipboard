@@ -7,7 +7,15 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@master/copyToClipboard.js
 or:
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.2.0/copyToClipboard.js
+https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.3.0/copyToClipboard.js
+```
+
+```html
+<script
+  src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.3.0/copyToClipboard.js"
+  integrity="sha384-9lRe6AQpEwXDt2qF8xOzrA6D2aqs9JmOrEDxUx6+CqgnnQH1D7NjUFEcP9Y5Uv7w"
+  crossorigin="anonymous"
+></script>
 ```
 
 ## Example usage:
@@ -71,3 +79,12 @@ var callback = function () {
 };
 createElementToClickToCopyToClipboard(parentElement, text, callback);
 ```
+
+or:
+
+```js
+// text can be automatically pulled from the parentElement:
+createElementToClickToCopyToClipboard(parentElement, callback);
+```
+
+(see [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html))

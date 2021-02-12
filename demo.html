@@ -6,17 +6,19 @@
     <title>Clipboard Demo</title>
   </head>
   <body>
-    <code id="code_goes_here"></code>
+    <code id="code_goes_here">
+      <pre>
+.some_selector {
+  background: transparent;
+}</pre
+      >
+    </code>
     <script src="copyToClipboard.js"></script>
     <script>
       createElementToClickToCopyToClipboard(
         document.getElementById("code_goes_here"),
-        `// some example code
-function test() {
-  alert('example code');
-}`,
-        function () {
-          alert("Copied code to clipboard!");
+        function (text) {
+          alert("Copied code to clipboard! \n\n" + text);
         }
       );
     </script>
