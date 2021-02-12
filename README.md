@@ -80,7 +80,7 @@ var callback = function () {
 createElementToClickToCopyToClipboard(parentElement, text, callback);
 ```
 
-or:
+or simply:
 
 ```js
 // text can be automatically pulled from the parentElement:
