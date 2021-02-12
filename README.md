@@ -20,6 +20,10 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.3.0/copyToClipboard.js
 
 ## Example usage:
 
+See [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html)
+
+or
+
 ```js
 function handleClick(text) {
   copyToClipboard(text, function () {
@@ -88,5 +92,3 @@ createElementToClickToCopyToClipboard(parentElement, function (code) {
   alert("Copied code to clipboard! \n\n" + text);
 });
 ```
-
-(see [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html))
