@@ -84,7 +84,9 @@ or:
 
 ```js
 // text can be automatically pulled from the parentElement:
-createElementToClickToCopyToClipboard(parentElement, callback);
+createElementToClickToCopyToClipboard(parentElement, function (code) {
+  alert("Copied code to clipboard! \n\n" + text);
+});
 ```
 
 (see [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html))
