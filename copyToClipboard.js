@@ -25,7 +25,8 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
       text = parentElement.innerText;
     }
     var html =
-      '<p>Click to copy to clipboard:</p><pre title="click to copy to clipboard" >' +
+      "<p>Click to copy to clipboard:</p>" +
+      '<pre title="click to copy to clipboard" style="cursor:copy;">' +
       text +
       "</pre>";
     parentElement.innerHTML = html;
