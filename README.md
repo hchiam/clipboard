@@ -20,6 +20,10 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@3.4.2/copyToClipboard.js
 
 ## Example usage:
 
+[Live CodePen demo](https://codepen.io/hchiam/pen/mdWGLNE)
+
+or
+
 See [demo.html](https://github.com/hchiam/clipboard/blob/master/demo.html)
 
 or
