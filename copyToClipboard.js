@@ -22,14 +22,14 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
     }
     if (!text || typeof text === "function") {
       callback = text;
-      text = parentElement.innerText;
+      text = encodeURI(parentElement.innerText);
     }
     var html =
       "<p>Click to copy to clipboard:</p>" +
       '<pre title="click to copy to clipboard" style="cursor:copy;">' +
       text +
       "</pre>";
-    parentElement.innerHTML = html;
+    parentElement.querySelector("p > pre").innerHTML = html;
     parentElement.addEventListener("click", function () {
       copyToClipboard(text, callback);
     });
