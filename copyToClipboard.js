@@ -22,16 +22,17 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
     }
     if (!text || typeof text === "function") {
       callback = text;
-      text = encodeURI(parentElement.innerText);
+      text = encodeURIComponent(parentElement.innerText);
     }
     var html =
       "<p>Click to copy to clipboard:</p>" +
       '<pre title="click to copy to clipboard" style="cursor:copy;">' +
-      text +
       "</pre>";
-    parentElement.querySelector("p > pre").innerHTML = html;
+    var decodedText = decodeURIComponent(text);
+    parentElement.innerHTML = html;
+    parentElement.querySelector("pre").innerText = decodedText;
     parentElement.addEventListener("click", function () {
-      copyToClipboard(text, callback);
+      copyToClipboard(decodedText, callback);
     });
   } catch (err) {
     console.log(

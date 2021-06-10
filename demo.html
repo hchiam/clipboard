@@ -8,6 +8,7 @@
   <body>
     <code id="code_goes_here">
       <pre>
+&lt;p&gt;Some p tag&lt;/p&gt;
 .some_selector {
   background: transparent;
 }</pre
@@ -15,12 +16,9 @@
     </code>
     <script src="copyToClipboard.js"></script>
     <script>
-      createElementToClickToCopyToClipboard(
-        document.getElementById("code_goes_here"),
-        function (text) {
-          alert("Copied code to clipboard! \n\n" + text);
-        }
-      );
+      createElementToClickToCopyToClipboard("#code_goes_here", function (text) {
+        alert("Copied code to clipboard! \n\n" + text);
+      });
     </script>
   </body>
 </html>
