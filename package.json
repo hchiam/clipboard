@@ -1,0 +1,23 @@
+{
+  "name": "clipboard",
+  "repository": "https://github.com/hchiam/clipboard.git",
+  "author": "hchiam <hchiam@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "prettier --write *.{js,css,scss,json,md,ts,tsx}"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,html,scss,json,md,ts,tsx}": "prettier --write"
+  }
+}

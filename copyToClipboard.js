@@ -24,14 +24,17 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
       callback = text;
       text = encodeURIComponent(parentElement.innerText);
     }
-    var html =
-      "<p>Click to copy to clipboard:</p>" +
-      '<pre title="click to copy to clipboard" style="cursor:copy;">' +
-      "</pre>";
     var decodedText = decodeURIComponent(text);
+    var html =
+      "<p>Click the following to copy it to clipboard:</p>" +
+      '<pre aria-label="click to copy to clipboard: (start of copyable text) ' +
+      decodedText +
+      ' (end of copyable text)" role="button" tabindex="0" style="cursor:copy;overflow:auto;" title="click to copy to clipboard">' +
+      "</pre>";
     parentElement.innerHTML = html;
-    parentElement.querySelector("pre").innerText = decodedText;
-    parentElement.addEventListener("click", function () {
+    var pre = parentElement.querySelector("pre");
+    pre.innerText = decodedText;
+    pre.addEventListener("click", function () {
       copyToClipboard(decodedText, callback);
     });
   } catch (err) {
