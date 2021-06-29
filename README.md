@@ -13,7 +13,7 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.0.0/copyToClipboard.js
 ```html
 <script
   src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.0.0/copyToClipboard.js"
-  integrity="sha384-8j12rhiLHnNM+q24C6cfc4/B3pK4T0QZq1mXVNGeXKDnvKGk6B+cO58R+4cY3LCs"
+  integrity="sha384-8O8wOOdwhQQdYJZguwtK1yfhHb8RTdR2t9d7KwFNDlK4JdrKjp6/gn60pGgbA+LZ"
   crossorigin="anonymous"
 ></script>
 ```
