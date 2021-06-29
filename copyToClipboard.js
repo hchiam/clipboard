@@ -28,7 +28,7 @@ function createElementToClickToCopyToClipboard(parentElement, text, callback) {
     var html =
       "<p>Click the following to copy it to clipboard:</p>" +
       '<pre aria-label="click to copy to clipboard: (start of copyable text) ' +
-      decodedText +
+      decodedText.replace(/"/g, "&quot;").replace(/'/g, "&#039;") +
       ' (end of copyable text)" role="button" tabindex="0" style="cursor:copy;overflow:auto;" title="click to copy to clipboard">' +
       "</pre>";
     parentElement.innerHTML = html;
