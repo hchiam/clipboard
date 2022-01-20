@@ -7,13 +7,13 @@ https://cdn.jsdelivr.net/gh/hchiam/clipboard@main/copyToClipboard.js
 or:
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.1.0/copyToClipboard.js
+https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.2.0/copyToClipboard.js
 ```
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.1.0/copyToClipboard.js"
-  integrity="sha384-0mdklNOtIdz/QCK1RD9Y0effU9vRc8WYsCHDmG0AdurVyrwkBOa2D8Q45c7WJxrs"
+  src="https://cdn.jsdelivr.net/gh/hchiam/clipboard@4.2.0/copyToClipboard.js"
+  integrity="sha384-pzfz9l0R5RpoN1FtQlQVlTV1V7cQSGRWfXEBb/z6Bwcxz/0XmdP0OPBdXXhimL4s"
   crossorigin="anonymous"
 ></script>
 ```
