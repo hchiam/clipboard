@@ -1,6 +1,14 @@
 function copyToClipboard(text, callback) {
   try {
-    navigator.clipboard.writeText(text); // if not IE
+    navigator.clipboard
+      .writeText(text) // if not IE
+      .catch(function (err) {
+        alert(
+          "Could not automatically copy to clipboard. \n\n Manually copy this text instead: \n\n" +
+            text
+        );
+        console.log(err);
+      });
     if (callback) callback(text);
   } catch (e) {
     try {
