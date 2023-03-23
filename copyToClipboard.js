@@ -9,7 +9,9 @@ function copyToClipboard(text, callback) {
         );
         console.log(err);
       });
-    if (callback) callback(text);
+    setTimeout(() => {
+      if (callback) callback(text);
+    }, 100);
   } catch (e) {
     try {
       var temp = document.createElement("textarea");
@@ -18,7 +20,9 @@ function copyToClipboard(text, callback) {
       temp.select();
       document.execCommand("copy");
       temp.remove();
-      if (callback) callback(text);
+      setTimeout(() => {
+        if (callback) callback(text);
+      }, 100);
     } catch (err) {
       alert(
         "Could not automatically copy to clipboard. \n\n Manually copy this text instead: \n\n" +
